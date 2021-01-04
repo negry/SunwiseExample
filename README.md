@@ -3,7 +3,7 @@
 ![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
 
 
-##Requerimientos
+### Requerimientos
                 
 ----
 - Xcode 11+
@@ -12,7 +12,7 @@
 ------------
 
 
-###Ejecución del proyecto
+### Ejecución del proyecto
                 
 ----
 
