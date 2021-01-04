@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1H8-ii-Taq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="Vv7-pI-l33">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" id="1H8-ii-Taq" customClass="DashboardViewController" customModule="Movie_Trailer_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9mx-kK-MMe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-Fz-bBD">
+                                <rect key="frame" x="0.0" y="327" width="414" height="569"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZa-Hf-A0F" customClass="MoviesTopView" customModule="Movie_Trailer_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="77" width="414" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="K1p-Xz-NkZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3HV-9D-EvU">
+                                <rect key="frame" x="350" y="44" width="64" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Logout  ">
+                                    <color key="titleColor" red="1" green="0.01208707165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutAction:" destination="1H8-ii-Taq" eventType="touchUpInside" id="1Vk-ej-vjx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pps-Fz-bBD" firstAttribute="leading" secondItem="lmy-fd-NbB" secondAttribute="leading" id="0WI-1p-wmD"/>
+                            <constraint firstItem="lmy-fd-NbB" firstAttribute="trailing" secondItem="3HV-9D-EvU" secondAttribute="trailing" id="7xi-OO-0S3"/>
+                            <constraint firstItem="lmy-fd-NbB" firstAttribute="trailing" secondItem="Pps-Fz-bBD" secondAttribute="trailing" id="9Tx-Ck-0XQ"/>
+                            <constraint firstItem="KZa-Hf-A0F" firstAttribute="leading" secondItem="lmy-fd-NbB" secondAttribute="leading" id="YNK-46-sdI"/>
+                            <constraint firstAttribute="bottom" secondItem="Pps-Fz-bBD" secondAttribute="bottom" id="c6E-b9-AID"/>
+                            <constraint firstItem="3HV-9D-EvU" firstAttribute="top" secondItem="lmy-fd-NbB" secondAttribute="top" id="g5j-dB-IbS"/>
+                            <constraint firstItem="Pps-Fz-bBD" firstAttribute="top" secondItem="KZa-Hf-A0F" secondAttribute="bottom" id="ltD-sQ-hCR"/>
+                            <constraint firstItem="lmy-fd-NbB" firstAttribute="trailing" secondItem="KZa-Hf-A0F" secondAttribute="trailing" id="o9I-Wt-z6Y"/>
+                            <constraint firstItem="KZa-Hf-A0F" firstAttribute="top" secondItem="3HV-9D-EvU" secondAttribute="bottom" id="z2O-B0-0DM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lmy-fd-NbB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RbO-xv-6xO"/>
+                    <connections>
+                        <outlet property="dashTableView" destination="Pps-Fz-bBD" id="2vi-j8-JqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvt-cE-U7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
+        </scene>
+    </scenes>
+</document>
